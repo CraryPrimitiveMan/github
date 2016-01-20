@@ -1,0 +1,21 @@
+{
+  "lib": [
+    "angular/angular.min.js",
+    "angular-animate/angular-animate.min.js",
+    "angular-sanitize/angular-sanitize.min.js",
+    "angular-ui-router/release/angular-ui-router.min.js",
+    "ionic/release/js/ionic.min.js",
+    "ionic/release/js/ionic-angular.min.js",
+    "github-api/github.js",
+    "js-base64/base64.min.js",
+    "xmlhttprequest/XMLHttpRequest.js",
+    "angular-couch-potato/dist/angular-couch-potato.js",
+    "requirejs/require.js"
+  ],
+  "fonts": [
+    "ionic/release/fonts/ionicons.eot",
+    "ionic/release/fonts/ionicons.svg",
+    "ionic/release/fonts/ionicons.ttf",
+    "ionic/release/fonts/ionicons.woff"
+  ]
+}

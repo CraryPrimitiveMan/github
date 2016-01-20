@@ -1,7 +1,16 @@
 {
-  "name": "HelloIonic",
+  "name": "github",
   "private": "true",
-  "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.2.1"
+  "dependencies": {
+    "ionic": "1.2.1",
+    "requirejs": "2.1.20",
+    "angular": "1.4.3",
+    "angular-animate": "1.4.3",
+    "angular-sanitize": "1.4.3",
+    "angular-ui-router": "0.2.13",
+    "angular-couch-potato": "0.1.1",
+    "js-base64": "2.1.9",
+    "xmlhttprequest": "*",
+    "github-api": "0.10.7"
   }
 }
