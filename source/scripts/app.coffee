@@ -5,12 +5,17 @@ define [
   'angularUIRouter'
   'angularLazyLoad'
   'ionicAngular'
+  'ngCordova'
+  'core'
+  'loader'
 ], (angular, uiRouter, lazyLoad) ->
   'use strict'
   app = angular.module('app', [
     'ionic'
     'ui.router'
     'scs.couch-potato'
+    'ngCordova'
+    'core'
   ])
 
   # Enable lazyloading for app module
@@ -50,19 +55,16 @@ define [
     ($ionicPlatform, $couchPotato) ->
       # Config the lazy load
       app.lazy = $couchPotato
-      # $ionicPlatform.ready(function() {
-      #   // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      #   // for form inputs)
-      #   if (window.cordova && window.cordova.plugins.Keyboard) {
-      #     cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      #     cordova.plugins.Keyboard.disableScroll(true);
+      # $ionicPlatform.ready( ->
+      #   # Hide the accessory bar by default (remove this to show the accessory bar above the keyboard for form inputs)
+      #   if window.cordova and window.cordova.plugins.Keyboard
+      #     cordova.plugins.Keyboard.hideKeyboardAccessoryBar true
+      #     cordova.plugins.Keyboard.disableScroll true
       #
-      #   }
-      #   if (window.StatusBar) {
-      #     // org.apache.cordova.statusbar required
-      #     StatusBar.styleDefault();
-      #   }
-      # });
+      #   if window.StatusBar
+      #     # org.apache.cordova.statusbar required
+      #     StatusBar.styleDefault()
+      # )
       return
     ]
   )

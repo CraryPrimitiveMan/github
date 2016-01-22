@@ -10,14 +10,15 @@ requirejs.config
     ionic: '../lib/ionic.min'
     ionicAngular: '../lib/ionic-angular.min'
     github: '../lib/github'
-    xmlhttprequest: '../lib/XMLHttpRequest'
-    'js-base64': '../lib/base64.min'
+    base64: '../lib/base64.min'
+    ngCordova: '../lib/ng-cordova.min'
   shim:
     angular: exports: 'angular'
     angularAnimate: deps: [ 'angular' ]
     angularSanitize: deps: [ 'angular' ]
     angularUIRouter: deps: [ 'angular' ]
     angularLazyLoad: deps: [ 'angular' ]
+    ngCordova: deps: [ 'angular' ]
     ionic:
       deps: [ 'angular' ]
       exports: 'ionic'
@@ -28,18 +29,10 @@ requirejs.config
       'angularAnimate'
       'angularSanitize'
     ]
-    'js-base64':
-      exports: 'js-base64'
+    'base64':
+      exports: 'base64'
       init: ->
-        window
-    'xmlhttprequest':
-      exports: 'xmlhttprequest'
-      init: ->
-        window
-    github: deps: [
-      'js-base64'
-      'xmlhttprequest'
-    ]
+        window.Base64
   priority: [
     'angular'
     'ionic'
