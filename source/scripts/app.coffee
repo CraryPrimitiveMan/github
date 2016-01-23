@@ -40,6 +40,14 @@ define [
         resolve:
           l: $couchPotatoProvider.resolveDependencies ['./controllers/loginCtrl']
 
+      $stateProvider.state 'events',
+        url: '/events'
+        templateUrl: templateBasePath + '/events.html'
+        controller: 'app.ctrl.events'
+        controllerAs: 'events'
+        resolve:
+          l: $couchPotatoProvider.resolveDependencies ['./controllers/eventsCtrl']
+
       $stateProvider.state 'profile',
         url: '/profile'
         templateUrl: templateBasePath + '/profile.html'
@@ -52,19 +60,22 @@ define [
   ]).run([
     '$ionicPlatform'
     '$couchPotato'
-    ($ionicPlatform, $couchPotato) ->
+    'dbService'
+    ($ionicPlatform, $couchPotato, dbService) ->
       # Config the lazy load
       app.lazy = $couchPotato
-      # $ionicPlatform.ready( ->
-      #   # Hide the accessory bar by default (remove this to show the accessory bar above the keyboard for form inputs)
-      #   if window.cordova and window.cordova.plugins.Keyboard
-      #     cordova.plugins.Keyboard.hideKeyboardAccessoryBar true
-      #     cordova.plugins.Keyboard.disableScroll true
-      #
-      #   if window.StatusBar
-      #     # org.apache.cordova.statusbar required
-      #     StatusBar.styleDefault()
-      # )
+      $ionicPlatform.ready ->
+        #dbService.init()
+        # Hide the accessory bar by default (remove this to show the accessory bar above the keyboard for form inputs)
+        if window.cordova and window.cordova.plugins.Keyboard
+          cordova.plugins.Keyboard.hideKeyboardAccessoryBar true
+          cordova.plugins.Keyboard.disableScroll true
+
+        if window.StatusBar
+          # org.apache.cordova.statusbar required
+          StatusBar.styleDefault()
+        return
+
       return
     ]
   )

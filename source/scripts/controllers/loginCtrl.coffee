@@ -12,16 +12,21 @@ define [
       $scope.doLogin = ->
         if not vm.username or not vm.password
           $ionicPopup.alert(
-            title: '提示'
+            title: 'Waring'
             template: 'User name or password is empty'
           )
 
-        options =
-          username: vm.username
-          password: vm.password
-        githubService.init(options).user.info().success((data) ->
-          alert(JSON.stringify(data))
-        )
+        githubService.getToken(vm.username, vm.password).success (data) ->
+          githubService.setToken data
+          $state.go 'events'
+
+
+        # options =
+        #   username: vm.username
+        #   password: vm.password
+        # githubService.init(options).user.info().success((data) ->
+        #   alert(JSON.stringify(data))
+        # )
 
       return
   ]

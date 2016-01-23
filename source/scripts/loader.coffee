@@ -1,3 +1,3 @@
 define [
-  #'directives/header'
+  'services/dbService'
 ], ->
