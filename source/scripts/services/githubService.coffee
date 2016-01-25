@@ -30,7 +30,7 @@ define [
         $http.put apiUrl + '/authorizations/clients/' + client.id, data, config
 
       githubService.setToken = (data) ->
-        $http.defaults.headers.common.authorization = 'token ' + data.token
+        #$http.defaults.headers.common.authorization = 'token ' + data.token
         return
 
       githubService.user = {

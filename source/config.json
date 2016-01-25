@@ -6,9 +6,7 @@
     "angular-ui-router/release/angular-ui-router.min.js",
     "ionic/release/js/ionic.min.js",
     "ionic/release/js/ionic-angular.min.js",
-    "github-api/github.js",
     "js-base64/base64.min.js",
-    "xmlhttprequest/XMLHttpRequest.js",
     "angular-couch-potato/dist/angular-couch-potato.js",
     "requirejs/require.js",
     "ngCordova/dist/ng-cordova.min.js"
@@ -17,6 +15,11 @@
     "ionic/release/fonts/ionicons.eot",
     "ionic/release/fonts/ionicons.svg",
     "ionic/release/fonts/ionicons.ttf",
-    "ionic/release/fonts/ionicons.woff"
+    "ionic/release/fonts/ionicons.woff",
+    "octicons/octicons/octicons.eot",
+    "octicons/octicons/octicons.svg",
+    "octicons/octicons/octicons.ttf",
+    "octicons/octicons/octicons.woff"
+
   ]
 }

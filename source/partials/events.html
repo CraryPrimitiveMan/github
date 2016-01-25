@@ -1,7 +1,16 @@
-<div class="list">
-    <a class="item item-avatar" href="#" ng-repeat="event in events.items">
-      <img ng-src="{{event.actor.avatar_url}}">
-      <h2>Venkman</h2>
-      <p>Back off, man. I'm a scientist.</p>
-    </a>
+<div class="list events">
+    <div class="item" ng-repeat="event in events.items">
+      <p>
+        <span class="mega-octicon octicon-git-commit" style="min-width: 32px;"></span>
+        <span>1 hours ago</span>
+      </p>
+      <div class="item-avatar">
+        <img ng-src="{{event.actor.avatar_url}}">
+        <p>
+          <a href="{{event.actor.url}}">{{event.actor.login}}</a>
+          {{event.payload.action}}
+          <a href="{{event.org.url}}">{{event.repo.name }}</a>
+        </p>
+      </div>
+    </div>
 </div>

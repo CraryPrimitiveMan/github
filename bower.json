@@ -10,9 +10,8 @@
     "angular-ui-router": "0.2.13",
     "angular-couch-potato": "0.1.1",
     "js-base64": "2.1.9",
-    "xmlhttprequest": "*",
-    "github-api": "0.10.7",
-    "ngCordova": "~0.1.24-alpha"
+    "ngCordova": "~0.1.24-alpha",
+    "octicons": "~3.4.1"
   },
   "devDependencies": {
     "platform.js": "platform#~1.3.1"

@@ -1,5 +1,6 @@
 define [
   'app'
+  'services/githubService'
 ], (app) ->
   app.registerController 'app.ctrl.events', [
     '$scope'

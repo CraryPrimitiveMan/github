@@ -1,0 +1,13 @@
+.events {
+  .item p {
+    white-space: normal;
+  }
+  .item-avatar {
+    position: relative;
+    > p {
+      display: table-cell;
+      height: 40px;
+      vertical-align: middle;
+    }
+  }
+}
