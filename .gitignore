@@ -7,3 +7,4 @@ plugins/
 www/
 source/lib/
 keep
+.DS_Store
