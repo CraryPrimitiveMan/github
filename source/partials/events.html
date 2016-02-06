@@ -1,16 +1,8 @@
-<div class="list events">
-    <div class="item" ng-repeat="event in events.items">
-      <p>
-        <span class="mega-octicon octicon-git-commit" style="min-width: 32px;"></span>
-        <span>1 hours ago</span>
-      </p>
-      <div class="item-avatar">
-        <img ng-src="{{event.actor.avatar_url}}">
-        <p>
-          <a href="{{event.actor.url}}">{{event.actor.login}}</a>
-          {{event.payload.action}}
-          <a href="{{event.org.url}}">{{event.repo.name }}</a>
-        </p>
-      </div>
-    </div>
+<div class="bar bar-header event-list-header">
+  <button class="button button-icon icon ion-navicon"></button>
+  <div class="button-bar">
+    <a class="button activated">News</a>
+    <a class="button">Activity</a>
+  </div>
 </div>
+<div event-list items="events.items"></div>

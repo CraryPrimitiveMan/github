@@ -12,6 +12,7 @@ requirejs.config
     github: '../lib/github'
     base64: '../lib/base64.min'
     ngCordova: '../lib/ng-cordova.min'
+    marked: '../lib/marked.min'
   shim:
     angular: exports: 'angular'
     angularAnimate: deps: [ 'angular' ]
@@ -29,7 +30,7 @@ requirejs.config
       'angularAnimate'
       'angularSanitize'
     ]
-    'base64':
+    base64:
       exports: 'base64'
       init: ->
         window.Base64

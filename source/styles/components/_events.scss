@@ -1,12 +1,18 @@
-.events {
+.event-list {
+  overflow-y: auto;
   .item p {
     white-space: normal;
+    span {
+      font-size: 16px;
+      margin-right: 5px;
+    }
   }
   .item-avatar {
     position: relative;
+    margin: -10px;
     > p {
       display: table-cell;
-      height: 40px;
+      height: 72px;
       vertical-align: middle;
     }
   }

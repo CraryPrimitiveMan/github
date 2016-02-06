@@ -1,4 +1,5 @@
 $octicons-font-path: "../fonts";
 @import "ionic.app";
 @import "../lib/octicons/octicons/octicons.scss";
-@import "components/events"
+@import "components/events";
+@import "pages/eventList";

@@ -5,9 +5,10 @@ define [
   app.registerController 'app.ctrl.login', [
     '$scope'
     '$state'
+    '$rootScope'
     '$ionicPopup'
     'githubService'
-    ($scope, $state, $ionicPopup, githubService) ->
+    ($scope, $state, $rootScope, $ionicPopup, githubService) ->
       vm = this
       $scope.doLogin = ->
         if not vm.username or not vm.password
@@ -17,6 +18,7 @@ define [
           )
 
         githubService.getToken(vm.username, vm.password).success (data) ->
+          $rootScope.isLogin = true
           githubService.setToken data
           $state.go 'events'
 

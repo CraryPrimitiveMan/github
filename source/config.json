@@ -9,7 +9,8 @@
     "js-base64/base64.min.js",
     "angular-couch-potato/dist/angular-couch-potato.js",
     "requirejs/require.js",
-    "ngCordova/dist/ng-cordova.min.js"
+    "ngCordova/dist/ng-cordova.min.js",
+    "marked/marked.min.js"
   ],
   "fonts": [
     "ionic/release/fonts/ionicons.eot",
